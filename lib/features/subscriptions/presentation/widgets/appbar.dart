@@ -1,6 +1,8 @@
-// import 'package:easy_bio/core/style/images/appassets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../../../core/constants/constants.dart';
+import '../../../../core/style/images/appassets.dart';
 
 class CostimeAppbar extends StatelessWidget implements PreferredSizeWidget {
   const CostimeAppbar({super.key});
@@ -12,13 +14,12 @@ class CostimeAppbar extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         title: Row(
           children: [
-            ElevatedButton(onPressed: () {}, child: Icon(Icons.abc)),
-            Spacer(),
-            SvgPicture.asset(
-              'assets/images/app_icon_white.svg',
-              height: 40,
-              width: 40,
+            ElevatedButton(
+              onPressed: () {},
+              child: SvgPicture.asset(AppAssets.themeIcon(context)),
             ),
+            Spacer(),
+            SvgPicture.asset(AppAssets.logo(context), height: 40, width: 40),
           ],
         ),
       ),
