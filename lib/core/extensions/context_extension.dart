@@ -2,12 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import '../style/colors/app_colors.dart';
+import '../style/images/appassets.dart';
 
 extension AppContextExtensions on BuildContext {
   AppColors get color {
     final isDark = Theme.of(this).brightness == Brightness.dark;
     return AppColors(isDark: isDark);
   }
+}
+
+class ThemeAwareAssets {
+  final BuildContext context;
+  ThemeAwareAssets(this.context);
+
+  String get logo => AppAssets.logo(context);
+  String get themeIcon => AppAssets.themeIcon(context);
 }
 
 extension ContextExt on BuildContext {
