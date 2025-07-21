@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../core/bottomwidget/CustomButton.dart';
 import '../../../../core/constants/constants.dart';
 import '../../../../core/style/colors/colors.dart';
+import '../../../../core/style/text/text_styles.dart';
 
 class Custombody extends StatelessWidget {
   const Custombody({super.key});
@@ -16,19 +17,18 @@ class Custombody extends StatelessWidget {
         SizedBox(height: 20),
         Text(
           'انت غير مشترك في أي فيديوهات',
-          style: TextStyle(color: ColorsLight.orange, fontSize: 20),
+          style: TextStyles.regular22.copyWith(color: ColorsLight.orange),
         ),
         SizedBox(height: 10),
         Text(
           'قم بالذهاب الى المنصة للاشتراك',
-          style: TextStyle(
+          style: TextStyles.regular16.copyWith(
             color: const Color.fromARGB(255, 111, 111, 111),
-            fontSize: 15,
           ),
         ),
         Text(
           'وعُد للمشاهدة',
-          style: TextStyle(
+          style: TextStyles.regular16.copyWith(
             color: const Color.fromARGB(255, 111, 111, 111),
             fontSize: 15,
           ),
