@@ -22,9 +22,9 @@ class MyApp extends StatelessWidget {
         ),
         darkTheme: ThemeData(
           brightness: Brightness.dark,
-          primaryColor: appColors.ColorsDark.primaryColor,
+          primaryColor: appColors.ColorsDark.black2,
         ),
-        themeMode: ThemeMode.light,
+        themeMode: ThemeMode.dark,
         home: const Subscriptionscreen(),
       ),
     );

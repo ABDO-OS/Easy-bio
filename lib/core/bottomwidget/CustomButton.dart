@@ -17,7 +17,7 @@ class CustomButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        height: 48.h,
+        height: 45.h,
         width: double.infinity,
         clipBehavior: Clip.antiAliasWithSaveLayer,
         decoration: BoxDecoration(
@@ -26,9 +26,9 @@ class CustomButton extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color: context.color.primaryColor,
-              blurRadius: 4,
-              offset: Offset(0, 2),
-              spreadRadius: 0,
+              // blurRadius: 4,
+              // offset: Offset(0, 2),
+              // spreadRadius: 0,
             ),
           ],
         ),
@@ -36,16 +36,13 @@ class CustomButton extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text(
+              text,
+              style: TextStyles.regular22.copyWith(color: Colors.white),
+            ),
+            SizedBox(width: 5),
             if (icon != null) icon!,
             if (icon != null) SizedBox(width: 8.w),
-
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              child: Text(
-                text,
-                style: TextStyles.regular22.copyWith(color: Colors.white),
-              ),
-            ),
           ],
         ),
       ),

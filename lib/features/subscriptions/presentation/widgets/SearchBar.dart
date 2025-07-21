@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../core/style/colors/colors.dart' as appColors;
+import '../../../../core/style/colors/colors.dart';
 
 class CustomSearchBar extends StatelessWidget {
   const CustomSearchBar({super.key});
@@ -10,8 +11,8 @@ class CustomSearchBar extends StatelessWidget {
       height: 50,
       margin: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: appColors.ColorsLight.primaryColor,
-        border: Border.all(color: appColors.ColorsLight.secondaryColor),
+        color: Theme.of(context).primaryColor,
+        border: Border.all(color: ColorsLight.thirdColor),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Row(
@@ -31,7 +32,7 @@ class CustomSearchBar extends StatelessWidget {
             height: double.infinity,
             width: 50,
             decoration: BoxDecoration(
-              color: appColors.ColorsLight.secondaryColor,
+              color: ColorsLight.thirdColor,
               borderRadius: BorderRadius.circular(15),
             ),
             child: Icon(Icons.search, color: appColors.ColorsLight.white),

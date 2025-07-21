@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../core/constants/constants.dart';
 import '../../../../core/style/images/appassets.dart';
 
 class CostimeAppbar extends StatelessWidget implements PreferredSizeWidget {
@@ -12,14 +11,20 @@ class CostimeAppbar extends StatelessWidget implements PreferredSizeWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 5.0),
       child: AppBar(
+        backgroundColor: Theme.of(context).primaryColor,
         title: Row(
           children: [
-            ElevatedButton(
+            IconButton(
               onPressed: () {},
-              child: SvgPicture.asset(AppAssets.themeIcon(context)),
+              icon: SvgPicture.asset(AppAssets.themeIcon(context)),
             ),
             Spacer(),
-            SvgPicture.asset(AppAssets.logo(context), height: 40, width: 40),
+            SvgPicture.asset(
+              AppAssets.logo(context),
+              // height: 30,
+              // width: 50,
+              // placeholderBuilder: (context) => CircularProgressIndicator(),
+            ),
           ],
         ),
       ),

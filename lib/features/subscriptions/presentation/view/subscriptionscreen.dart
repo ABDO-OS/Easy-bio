@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/style/colors/colors.dart' as appColors;
 import '../widgets/SearchBar.dart';
 import '../widgets/appbar.dart';
 import '../widgets/custombody.dart';
@@ -16,9 +15,9 @@ class Subscriptionscreen extends StatelessWidget {
       body: Column(
         children: [
           CustomSearchBar(),
-          Spacer(),
+          Spacer(flex: 1),
           Center(child: Custombody()),
-          Spacer(),
+          Spacer(flex: 2),
         ],
       ),
     );

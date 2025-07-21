@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/bottomwidget/CustomButton.dart';
+import '../../../../core/constants/constants.dart';
 import '../../../../core/style/colors/colors.dart';
-import '../../../../core/style/images/appassets.dart';
 
 class Custombody extends StatelessWidget {
   const Custombody({super.key});
@@ -12,12 +12,13 @@ class Custombody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SvgPicture.asset(AppAssets.themeIcon(context)),
+        SvgPicture.asset(ImageAssets.bag),
+        SizedBox(height: 20),
         Text(
           'انت غير مشترك في أي فيديوهات',
           style: TextStyle(color: ColorsLight.orange, fontSize: 20),
         ),
-        SizedBox(height: 15),
+        SizedBox(height: 10),
         Text(
           'قم بالذهاب الى المنصة للاشتراك',
           style: TextStyle(
@@ -32,7 +33,14 @@ class Custombody extends StatelessWidget {
             fontSize: 15,
           ),
         ),
-        CustomButton(text: 'الذهاب للمنصة', icon: Icon(Icons.web)),
+        SizedBox(height: 15),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
+          child: CustomButton(
+            text: 'الذهاب للمنصة',
+            icon: Icon(Icons.language),
+          ),
+        ),
       ],
     );
   }

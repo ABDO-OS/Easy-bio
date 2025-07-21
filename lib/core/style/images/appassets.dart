@@ -10,6 +10,6 @@ class AppAssets {
 
   static String themeIcon(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    return isDark ? ImageAssets.iconDarkTheme : ImageAssets.iconLightTheme;
+    return isDark ? ImageAssets.iconLightTheme : ImageAssets.iconDarkTheme;
   }
 }
