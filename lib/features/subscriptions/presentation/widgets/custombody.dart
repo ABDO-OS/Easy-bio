@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/bottomwidget/CustomButton.dart';
 import '../../../../core/constants/constants.dart';
+import '../../../../core/style/colors/app_colors.dart';
 import '../../../../core/style/colors/colors.dart';
 import '../../../../core/style/text/text_styles.dart';
 
@@ -38,7 +39,7 @@ class Custombody extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
           child: CustomButton(
             text: 'الذهاب للمنصة',
-            icon: Icon(Icons.language),
+            icon: Icon(Icons.language, color: ColorsLight.white),
           ),
         ),
       ],

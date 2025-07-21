@@ -1,3 +1,4 @@
+import 'package:easy_bio/core/extensions/context_extension.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/style/colors/colors.dart' as appColors;
 import '../../../../core/style/colors/colors.dart';
@@ -12,8 +13,8 @@ class CustomSearchBar extends StatelessWidget {
       height: 50,
       margin: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Theme.of(context).primaryColor,
-        gradient: kmaingradient,
+        color: context.color.isDark ? null : context.color.primaryColor,
+        gradient: context.color.isDark ? kmaingradient : null,
         borderRadius: BorderRadius.circular(16),
       ),
 
@@ -32,7 +33,7 @@ class CustomSearchBar extends StatelessWidget {
                   decoration: InputDecoration(
                     hintText: 'ابحث في الفيديوهات',
                     hintStyle: TextStyles.regular16.copyWith(
-                      color: ColorsLight.thirdColor.withOpacity(0.5),
+                      color: context.color.primaryColor.withOpacity(0.5),
                     ),
                     border: InputBorder.none,
                     contentPadding: const EdgeInsets.symmetric(horizontal: 20),
@@ -43,10 +44,10 @@ class CustomSearchBar extends StatelessWidget {
                 height: double.infinity,
                 width: 50,
                 decoration: BoxDecoration(
-                  color: ColorsLight.thirdColor,
+                  color: context.color.primaryColor,
                   borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(15.0),
-                    topRight: Radius.circular(15),
+                    topRight: Radius.circular(14),
                   ),
                 ),
                 child: Icon(Icons.search, color: appColors.ColorsLight.white),

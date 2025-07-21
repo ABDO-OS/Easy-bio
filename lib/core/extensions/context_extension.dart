@@ -3,9 +3,9 @@ import '../style/colors/app_colors.dart';
 import '../style/images/appassets.dart';
 
 extension AppContextExtensions on BuildContext {
-  AppColors get color {
+  AppColorss get color {
     final isDark = Theme.of(this).brightness == Brightness.dark;
-    return AppColors(isDark: isDark);
+    return AppColorss(isDark: isDark);
   }
 }
 

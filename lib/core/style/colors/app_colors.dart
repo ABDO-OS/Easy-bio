@@ -1,18 +1,19 @@
 import 'package:easy_bio/core/style/colors/colors.dart';
 import 'package:flutter/material.dart';
 
-class AppColors {
+class AppColorss {
   final bool isDark;
 
-  AppColors({required this.isDark});
+  AppColorss({required this.isDark});
 
   Color get primaryColor =>
-      isDark ? ColorsDark.primaryColor : ColorsLight.primaryColor;
+      isDark ? ColorsDark.primaryColor : ColorsLight.secondaryColor;
 
   Color get secondaryColor =>
-      isDark ? ColorsDark.secondaryColor : ColorsLight.secondaryColor;
+      isDark ? ColorsDark.secondaryColor : ColorsLight.primaryColor;
 
   Color get backgroundColor => isDark ? ColorsDark.black2 : ColorsLight.white;
 
   Color get textColor => isDark ? ColorsLight.white : ColorsLight.black;
 }
+// ColorsLight.primaryColor
