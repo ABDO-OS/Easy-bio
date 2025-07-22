@@ -1,3 +1,4 @@
+import 'package:easy_bio/core/extensions/context_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -11,7 +12,7 @@ class CostimeAppbar extends StatelessWidget implements PreferredSizeWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 5.0),
       child: AppBar(
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: context.color.backgroundColor,
         title: Row(
           children: [
             IconButton(

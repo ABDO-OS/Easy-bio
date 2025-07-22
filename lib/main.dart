@@ -2,6 +2,7 @@ import 'package:easy_bio/features/subscriptions/presentation/view/subscriptionsc
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/style/colors/colors.dart' as appColors;
+import 'features/account/presentation/view/accountscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
           primaryColor: appColors.ColorsDark.black2,
         ),
         themeMode: ThemeMode.dark,
-        home: const Subscriptionscreen(),
+        home: const Accountscreen(),
       ),
     );
   }

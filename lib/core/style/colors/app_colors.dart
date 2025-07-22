@@ -15,5 +15,8 @@ class AppColorss {
   Color get backgroundColor => isDark ? ColorsDark.black2 : ColorsLight.white;
 
   Color get textColor => isDark ? ColorsLight.white : ColorsLight.black;
+
+  Color get infoColor =>
+      isDark ? ColorsLight.white : ColorsLight.secondaryColor;
 }
 // ColorsLight.primaryColor
