@@ -18,5 +18,8 @@ class AppColorss {
 
   Color get infoColor =>
       isDark ? ColorsLight.white : ColorsLight.secondaryColor;
+
+  Color get editbottom =>
+      isDark ? ColorsDark.black2 : ColorsLight.secondaryColor;
 }
 // ColorsLight.primaryColor

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../subscriptions/presentation/widgets/appbar.dart';
 import '../data/customInfofeld.dart';
+import '../widgets/buttombody.dart';
 import '../widgets/profilefield.dart';
 
 class Accountscreen extends StatelessWidget {
@@ -12,7 +13,7 @@ class Accountscreen extends StatelessWidget {
     return const Scaffold(
       appBar: CostimeAppbar(),
       body: Padding(
-        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -22,16 +23,16 @@ class Accountscreen extends StatelessWidget {
                 Profilefield(
                   info: Custominfofeld(
                     icon: Icons.flag_circle_rounded,
-                    lable: "one",
-                    value: "الصف الثالث الثانوي",
+                    lable: "المحافظة",
+                    value: "القاهرة",
                   ),
                 ),
                 Spacer(),
                 Profilefield(
                   info: Custominfofeld(
                     icon: Icons.flag,
-                    lable: "two",
-                    value: "القاهره",
+                    lable: "السنة الدراسية",
+                    value: "الصف الثالث الثانوي",
                   ),
                 ),
               ],
@@ -40,10 +41,12 @@ class Accountscreen extends StatelessWidget {
             Profilefield(
               info: Custominfofeld(
                 icon: Icons.flag_circle_outlined,
-                lable: "three",
-                value: "الصف الثالث الثانوي",
+                lable: "رقم الهاتف",
+                value: "01061093843",
               ),
             ),
+            Spacer(),
+            Buttombody(),
           ],
         ),
       ),

@@ -8,10 +8,17 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // import 'styles/text/text_styles.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, this.onTap, required this.text, this.icon});
+  const CustomButton({
+    super.key,
+    this.onTap,
+    required this.text,
+    this.icon,
+    this.color,
+  });
   final void Function()? onTap;
   final Widget? icon;
   final String text;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -21,16 +28,16 @@ class CustomButton extends StatelessWidget {
         width: double.infinity,
         clipBehavior: Clip.antiAliasWithSaveLayer,
         decoration: BoxDecoration(
-          color: context.color.primaryColor,
+          color: color ?? context.color.primaryColor,
           borderRadius: BorderRadius.circular(16.r),
-          boxShadow: [
-            BoxShadow(
-              color: context.color.primaryColor,
-              // blurRadius: 4,
-              // offset: Offset(0, 2),
-              // spreadRadius: 0,
-            ),
-          ],
+          // boxShadow: [
+          //   BoxShadow(
+          //     color: context.color.primaryColor,
+          //     // blurRadius: 4,
+          //     // offset: Offset(0, 2),
+          //     // spreadRadius: 0,
+          //   ),
+          // ],
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,

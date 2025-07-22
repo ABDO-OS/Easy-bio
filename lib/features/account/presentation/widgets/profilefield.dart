@@ -23,6 +23,7 @@ class Profilefield extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                 ),
               ),
+              SizedBox(width: 5),
               Icon(info.icon, size: 16, color: context.color.primaryColor),
             ],
           ),
