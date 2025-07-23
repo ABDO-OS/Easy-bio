@@ -1,17 +1,19 @@
 import 'package:easy_bio/core/extensions/context_extension.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../data/customInfofeld.dart';
 
 class Profilefield extends StatelessWidget {
-  const Profilefield({super.key, required this.info});
+  const Profilefield({super.key, required this.info, this.username});
   final Custominfofeld info;
+  final String? username;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 156,
+      width: 0.4.sw,
       child: Column(
-        // crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -19,39 +21,36 @@ class Profilefield extends StatelessWidget {
               Text(
                 info.lable,
                 style: TextStyle(
-                  color: context.color.primaryColor,
+                  fontSize: 14.sp,
                   fontWeight: FontWeight.w600,
+                  color: context.color.primaryColor,
                 ),
               ),
-              SizedBox(width: 5),
-              Icon(info.icon, size: 16, color: context.color.primaryColor),
+              SizedBox(width: 2.w),
+              Icon(info.icon, size: 20.sp, color: context.color.primaryColor),
             ],
           ),
 
-          const SizedBox(height: 8),
-          Stack(
-            children: [
-              Container(
-                padding: const EdgeInsets.all(12),
-                height: 60,
-                decoration: BoxDecoration(
-                  border: Border.all(color: context.color.infoColor),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Center(
-                    child: Text(
-                      info.value,
-                      style: TextStyle(
-                        color: context.color.infoColor,
-                        fontSize: 14,
-                      ),
-                    ),
-                  ),
+          SizedBox(height: 3.h),
+
+          Container(
+            // alignment: Alignment.bottomRight,
+            constraints: BoxConstraints(minHeight: 50.h),
+            width: double.infinity,
+            decoration: BoxDecoration(
+              border: Border.all(color: context.color.infoColor),
+              borderRadius: BorderRadius.circular(12.r),
+            ),
+            child: Align(
+              alignment: Alignment.center,
+              child: Text(
+                info.value,
+                style: TextStyle(
+                  fontSize: 15.sp,
+                  color: context.color.infoColor,
                 ),
               ),
-            ],
+            ),
           ),
         ],
       ),

@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
           primaryColor: appColors.ColorsDark.black2,
         ),
-        themeMode: ThemeMode.light,
+        themeMode: ThemeMode.dark,
         home: const Accountscreen(),
       ),
     );
