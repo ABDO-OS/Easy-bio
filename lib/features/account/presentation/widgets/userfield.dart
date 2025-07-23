@@ -13,11 +13,10 @@ class Userfield extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 0.9.sw, // Responsive for phones and tablets
+      width: 0.9.sw,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Label and icon
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -30,12 +29,11 @@ class Userfield extends StatelessWidget {
                 ),
               ),
               SizedBox(width: 5.w),
-              Icon(info.icon, size: 16.sp, color: context.color.primaryColor),
+              info.icon ?? SizedBox(),
             ],
           ),
           SizedBox(height: 8.h),
 
-          // Container with top-right icon
           Stack(
             children: [
               Container(
@@ -47,16 +45,13 @@ class Userfield extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    // Image avatar
-
-                    // Text content
                     Expanded(
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.end, // لليمين
+                        crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Text(
                             username ?? "",
-                            textAlign: TextAlign.right, // محاذاة لليمين
+                            textAlign: TextAlign.right,
                             style: TextStyle(
                               fontSize: 18.sp,
                               fontWeight: FontWeight.w600,
@@ -66,7 +61,7 @@ class Userfield extends StatelessWidget {
                           SizedBox(height: 4.h),
                           Text(
                             info.value,
-                            textAlign: TextAlign.right, // محاذاة لليمين
+                            textAlign: TextAlign.right,
                             style: TextStyle(
                               fontSize: 14.sp,
                               color: context.color.infoColor,

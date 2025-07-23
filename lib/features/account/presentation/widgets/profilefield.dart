@@ -27,7 +27,7 @@ class Profilefield extends StatelessWidget {
                 ),
               ),
               SizedBox(width: 2.w),
-              Icon(info.icon, size: 20.sp, color: context.color.primaryColor),
+              info.icon ?? SizedBox(),
             ],
           ),
 

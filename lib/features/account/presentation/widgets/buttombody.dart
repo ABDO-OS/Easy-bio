@@ -19,7 +19,11 @@ class Buttombody extends StatelessWidget {
         CustomButton(
           text: 'تعديل بياناتك بالمنصة',
           color: context.color.editbottom,
-          icon: Icon(Icons.edit, color: ColorsLight.white),
+          icon: ImageIcon(
+            AssetImage('assets/images/icons/bx_edit.png'),
+            // size: 20,
+            color: ColorsLight.white,
+          ),
         ),
         SizedBox(height: 20),
         CustomButton(text: 'تسجيل الخروج', color: ColorsLight.orange),

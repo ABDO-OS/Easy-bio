@@ -1,3 +1,4 @@
+import 'package:easy_bio/core/extensions/context_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -21,7 +22,11 @@ class Accountscreen extends StatelessWidget {
           children: [
             Userfield(
               info: Custominfofeld(
-                icon: Icons.flag_circle_rounded,
+                icon: ImageIcon(
+                  AssetImage('assets/images/icons/user.png'),
+                  size: 17,
+                  color: context.color.primaryColor,
+                ),
                 lable: "المحافظة",
                 value: "القاهرة",
               ),
@@ -33,7 +38,11 @@ class Accountscreen extends StatelessWidget {
               children: [
                 Profilefield(
                   info: Custominfofeld(
-                    icon: Icons.flag_circle_rounded,
+                    icon: ImageIcon(
+                      AssetImage('assets/images/icons/flag.png'),
+                      size: 20,
+                      color: context.color.primaryColor,
+                    ),
                     lable: "المحافظة",
                     value: "القاهرة",
                   ),
@@ -41,7 +50,11 @@ class Accountscreen extends StatelessWidget {
                 Spacer(),
                 Profilefield(
                   info: Custominfofeld(
-                    icon: Icons.flag,
+                    icon: ImageIcon(
+                      AssetImage('assets/images/icons/student.png'),
+                      size: 20,
+                      color: context.color.primaryColor,
+                    ),
                     lable: "السنة الدراسية",
                     value: "الصف الثالث الثانوي",
                   ),
@@ -51,7 +64,11 @@ class Accountscreen extends StatelessWidget {
             SizedBox(height: 15.h),
             Profilefield(
               info: Custominfofeld(
-                icon: Icons.flag_circle_outlined,
+                icon: ImageIcon(
+                  AssetImage('assets/images/icons/telephone.png'),
+                  size: 20,
+                  color: context.color.primaryColor,
+                ),
                 lable: "رقم الهاتف",
                 value: "01061093843",
               ),

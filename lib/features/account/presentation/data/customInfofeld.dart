@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Custominfofeld {
   final String lable;
-  final IconData icon;
+  final Widget? icon;
   final String value;
 
   const Custominfofeld({
