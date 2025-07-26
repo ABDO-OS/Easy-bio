@@ -21,7 +21,6 @@ class Buttombody extends StatelessWidget {
           color: context.color.editbottom,
           icon: ImageIcon(
             AssetImage('assets/images/icons/bx_edit.png'),
-            // size: 20,
             color: ColorsLight.white,
           ),
         ),

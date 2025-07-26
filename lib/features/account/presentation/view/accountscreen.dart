@@ -1,12 +1,9 @@
-import 'package:easy_bio/core/extensions/context_extension.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../subscriptions/presentation/widgets/appbar.dart';
 import '../data/customInfofeld.dart';
 import '../widgets/buttombody.dart';
 import '../widgets/profilefield.dart';
-import '../widgets/userfield.dart';
 
 class Accountscreen extends StatelessWidget {
   const Accountscreen({super.key});
@@ -15,68 +12,42 @@ class Accountscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CostimeAppbar(),
-      body: Padding(
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20.h),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Userfield(
-              info: Custominfofeld(
-                icon: ImageIcon(
-                  AssetImage('assets/images/icons/user.png'),
-                  size: 17,
-                  color: context.color.primaryColor,
-                ),
-                lable: "المحافظة",
-                value: "القاهرة",
+      body: Column(
+        // mainAxisAlignment: MainAxisAlignment.start,
+        // crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Profilefield(
+            iccon: Image.asset('assets/images/icons/user.png'),
+            labble: "الطالب",
+            info: Custominfofeld(
+              imagge: Image.asset('assets/images/me.jpg'),
+              name: "Abdalrhman Osama",
+              user: "boda",
+            ),
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Profilefield(
+                iccon: Image.asset('assets/images/icons/student.png'),
+                labble: "السنة الدراسية",
+                info: Custominfofeld(value: "الصف الثالث الثانوي"),
               ),
-              username: "عبد الرحمن أسامة",
-            ),
-            Spacer(flex: 1),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Profilefield(
-                  info: Custominfofeld(
-                    icon: ImageIcon(
-                      AssetImage('assets/images/icons/flag.png'),
-                      size: 20,
-                      color: context.color.primaryColor,
-                    ),
-                    lable: "المحافظة",
-                    value: "القاهرة",
-                  ),
-                ),
-                Spacer(),
-                Profilefield(
-                  info: Custominfofeld(
-                    icon: ImageIcon(
-                      AssetImage('assets/images/icons/student.png'),
-                      size: 20,
-                      color: context.color.primaryColor,
-                    ),
-                    lable: "السنة الدراسية",
-                    value: "الصف الثالث الثانوي",
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 15.h),
-            Profilefield(
-              info: Custominfofeld(
-                icon: ImageIcon(
-                  AssetImage('assets/images/icons/telephone.png'),
-                  size: 20,
-                  color: context.color.primaryColor,
-                ),
-                lable: "رقم الهاتف",
-                value: "01061093843",
+              Profilefield(
+                iccon: Image.asset('assets/images/icons/flag.png'),
+                labble: "المحافظة",
+                info: Custominfofeld(value: "القاهره"),
               ),
-            ),
-            Spacer(flex: 10),
-            Buttombody(),
-          ],
-        ),
+            ],
+          ),
+          Profilefield(
+            iccon: Image.asset('assets/images/icons/telephone.png'),
+            labble: "رقم الهاتف",
+            info: Custominfofeld(value: "01122659904"),
+          ),
+          Buttombody(),
+        ],
       ),
     );
   }

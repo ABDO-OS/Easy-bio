@@ -1,4 +1,3 @@
-import 'package:easy_bio/features/subscriptions/presentation/view/subscriptionscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/style/colors/colors.dart' as appColors;
