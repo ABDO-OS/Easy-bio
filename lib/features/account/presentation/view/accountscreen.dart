@@ -13,20 +13,21 @@ class Accountscreen extends StatelessWidget {
     return Scaffold(
       appBar: CostimeAppbar(),
       body: Column(
-        // mainAxisAlignment: MainAxisAlignment.start,
-        // crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Profilefield(
             iccon: Image.asset('assets/images/icons/user.png'),
             labble: "الطالب",
             info: Custominfofeld(
-              imagge: Image.asset('assets/images/me.jpg'),
+              imagge: CircleAvatar(
+                radius: 31,
+                backgroundImage: AssetImage('assets/images/me.jpg'),
+              ),
+
               name: "Abdalrhman Osama",
               user: "boda",
             ),
           ),
           Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Profilefield(

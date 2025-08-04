@@ -14,11 +14,13 @@ class CustomButton extends StatelessWidget {
     required this.text,
     this.icon,
     this.color,
+    this.textColor = Colors.white,
   });
   final void Function()? onTap;
   final Widget? icon;
   final String text;
   final Color? color;
+  final Color? textColor;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -43,10 +45,7 @@ class CustomButton extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              text,
-              style: TextStyles.regular22.copyWith(color: Colors.white),
-            ),
+            Text(text, style: TextStyles.regular22.copyWith(color: textColor)),
             SizedBox(width: 5),
             if (icon != null) icon!,
             if (icon != null) SizedBox(width: 8.w),

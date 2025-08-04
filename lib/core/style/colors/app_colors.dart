@@ -12,9 +12,13 @@ class AppColorss {
   Color get secondaryColor =>
       isDark ? ColorsDark.secondaryColor : ColorsLight.primaryColor;
 
+  Color get accountbottomcolor =>
+      isDark ? ColorsDark.secondaryColor : ColorsDark.primaryColor;
+
   Color get backgroundColor => isDark ? ColorsDark.black2 : ColorsLight.white;
 
   Color get textColor => isDark ? ColorsLight.white : ColorsLight.black;
+  Color get accountColor => isDark ? ColorsLight.black : ColorsLight.white;
 
   Color get infoColor =>
       isDark ? ColorsLight.white : ColorsLight.secondaryColor;
